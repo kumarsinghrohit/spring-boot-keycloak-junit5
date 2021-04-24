@@ -1,0 +1,20 @@
+server:
+  port: 8089
+  use-forward-headers: true
+  tomcat:
+    protocol-header: X-Forwarded-Mosaiq-Proto
+    port-header: X-Forwarded-Mosaiq-Port
+
+spring:
+  thymeleaf:
+    cache: false
+    
+## Keycloak configuration
+keycloak:
+  auth-server-url: http://localhost:8080/auth
+  realm: TestSecureApiDemo
+  resource: TestSecureApiDemo
+  public-client: true
+
+security:
+  disable-csrf: true
